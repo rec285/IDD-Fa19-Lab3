@@ -83,11 +83,9 @@ void setColor(int red, int green, int blue)
   analogWrite(redPin, red);
   analogWrite(greenPin, green);
   analogWrite(bluePin, blue);  
-}```
+}
+```
 
-## Optional. Graphic Display
-
-**Take a picture of your screen working insert it here!** :(
 
 ## Part D. Logging values to the EEPROM and reading them back
  
@@ -106,8 +104,10 @@ Because upon entering the states it runs the code to execute on eeprom once and 
 Read the analog data from the pins and encode it as 8 bits representing values 0-255 using binary.
 
 **e. Alternately, how would we store the data if it were bigger than a byte? (hint: take a look at the [EEPROMPut](https://www.arduino.cc/en/Reference/EEPROMPut) example)**
+use multiple bytes that are adjacent to each other and increment your location in EEPROM by the size of what you store to avoid interfering with the data.
 
 **Upload your modified code that takes in analog values from your sensors and prints them back out to the Arduino Serial Monitor.**
+
 
 ### 2. Design your logger
  
